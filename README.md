@@ -6,5 +6,6 @@ This was a semester-long project done in Spring 2021. It consists of 3 cpp files
 
 The first program to be run is asm.cpp and it takes in a .s file containing a program written in E20. It assembles this into machine code and outputs a .bin file containing
 the program. The next program to be run is sim.cpp, which takes in a .bin file containing E20 program instructions and executes it. The third program is simcache.cpp which
-includes LRUCache.h and also takes a .bin file as its input. It simulates the performance effect of an LRU (Least Recently Used) cache on a given E20 program, by cataloging 
-the cache hits and misses for each attempted memory access by the program.
+includes LRUCache.h and also takes a .bin file as its input, as well as a cache size, associativity, and blocksize in bytes. It can simulate the effects of one or two caches. 
+It simulates the performance effect of an LRU (Least Recently Used) cache on a given E20 program, by cataloging and printing out the cache hits and misses for each attempted 
+memory access by the program.
