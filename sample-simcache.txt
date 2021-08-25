@@ -1,0 +1,29 @@
+Sample input to simcache:
+stride4.bin --cache 32,2,4
+
+First 12 lines of stride4.bin:
+ram[0] = 16'b1110000010110101;		// movi $1,53
+ram[1] = 16'b1000001110010001;		// lw $7,hundred($0)
+ram[2] = 16'b1011110010000000;		// sw $1,0($7)
+ram[3] = 16'b1011110010000100;		// sw $1,4($7)
+ram[4] = 16'b1011110010001000;		// sw $1,8($7)
+ram[5] = 16'b1011110010001100;		// sw $1,12($7)
+ram[6] = 16'b1011110010010000;		// sw $1,16($7)
+ram[7] = 16'b1110000100001010;		// movi $2,10
+ram[8] = 16'b1100100000000111;		// loop: jeq $2,$0,done
+ram[9] = 16'b1110100101111111;		// addi $2,$2,-1
+ram[10] = 16'b1001110010000000;		// lw $1,0($7)
+ram[11] = 16'b1001110010000100;		// lw $1,4($7)
+ram[12] = 16'b1001110010001000;		// lw $1,8($7)
+
+Partial sample output of simcache:
+Cache L1 has size 32, associativity 2, blocksize 4, lines 4
+L1 MISS  pc:    1       addr:   17      line:   0
+L1 SW    pc:    2       addr:  100      line:   1
+L1 SW    pc:    3       addr:  104      line:   2
+L1 SW    pc:    4       addr:  108      line:   3
+L1 SW    pc:    5       addr:  112      line:   0
+L1 SW    pc:    6       addr:  116      line:   1
+L1 HIT   pc:   10       addr:  100      line:   1
+L1 HIT   pc:   11       addr:  104      line:   2
+L1 HIT   pc:   12       addr:  108      line:   3
