@@ -50,9 +50,6 @@ ram[5] = 16'b0000101011100011;
 ram[6] = 16'b0000101011110010;
 ram[7] = 16'b0100000000000111;
 
-
-
-
 Sample input to sim:
 math.bin
 
@@ -85,7 +82,7 @@ e085 e57e 0530 e237 10d1 0ae3 0af2 4007
 Sample input to simcache:
 stride4.bin --cache 32,2,4
 
-Partial contents of stride4.bin:
+First 12 lines of stride4.bin:
 ram[0] = 16'b1110000010110101;		// movi $1,53
 ram[1] = 16'b1000001110010001;		// lw $7,hundred($0)
 ram[2] = 16'b1011110010000000;		// sw $1,0($7)
