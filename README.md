@@ -11,4 +11,4 @@ and executes it. It prints out the final state of all 7 registers, as well as th
 blocksize in bytes. It can simulate the effects of one or two caches. It simulates the performance effect of an LRU (Least Recently Used) cache on a given E20 program, by 
 cataloging and printing out the cache hits and misses for each attempted memory access by the program. An example of that can be found [here](sample-simcache.txt).
 
-This was compiled using gcc 9.3.0.
+This was compiled using gcc 9.3.0 and run on Linux.
